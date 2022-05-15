@@ -22,7 +22,6 @@ font-family: 'Smooch Sans', sans-serif;
 }
 
 body {
-  max-width: 1000px;
   margin: auto;
 }
 
@@ -33,37 +32,4 @@ a {
 
 ul, li {
   list-style-type: none;
-}
-
-p {
-  font-size: 18px;
-}
-
-/* Header --- */
-
-.top-bar {
-  background-color: var(--color2);
-  color: var(--color1);
-  display: flex;
-  justify-content: center;
-  padding: 5px 0;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 0;
-  font-size: 21px;
-}
-
-.nav {
-  display: flex;
-}
-
-.nav li {
-  padding: 0 15px;
-}
-
-.active {
-  border-bottom: 2px solid black;
 }

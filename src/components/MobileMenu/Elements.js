@@ -23,7 +23,7 @@ export const Sidebar = styled.aside`
 export const Icon = styled(FiX)`
 	position: absolute;
 	top: 20px;
-	right: 30px;
+	right: 25px;
 	margin-top: 5px;
 	color: var(--light);
 	font-size: var(--h2);

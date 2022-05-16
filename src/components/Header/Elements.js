@@ -7,6 +7,7 @@ export const Navbar = styled.div`
 	top: 0;
 	width: 100%;
 	height: 80px;
+	margin-top: -80px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -20,7 +21,7 @@ export const Nav = styled.nav`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 5px 25px;
+	padding: 5px 20px;
 `;
 
 export const MenuIcon = styled.div`

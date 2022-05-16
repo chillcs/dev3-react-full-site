@@ -1,6 +1,6 @@
+import Header from '../components/Header/index';
+import MobileMenu from '../components/MobileMenu/index';
 import React, { useState } from 'react';
-import Sidebar from '../components/Sidebar';
-import Navbar from '../components/Nav';
 
 const Home = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -11,8 +11,8 @@ const Home = () => {
 
 	return (
 		<>
-			<Sidebar isOpen={isOpen} toggle={toggle} />
-			<Navbar toggle={toggle} />
+			<Header toggle={toggle} />
+			<MobileMenu isOpen={isOpen} toggle={toggle} />
 		</>
 	);
 };

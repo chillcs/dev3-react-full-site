@@ -13,7 +13,7 @@ export const Sidebar = styled.aside`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 15%;
+	gap: 10%;
 	background: var(--medium);
 	transition: 0.3s ease-in-out;
 	top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
@@ -43,7 +43,7 @@ export const Menu = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 25px;
+	gap: 15px;
 	color: var(--dark);
 `;
 

@@ -6,12 +6,13 @@ export const Navbar = styled.div`
 	position: sticky;
 	top: 0;
 	width: 100%;
-	height: 80px;
-	margin-top: -80px;
+	height: var(--header);
+	margin-top: calc(var(--header) * -1);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: var(--dark);
+	background: ${({ darkmode }) => (darkmode ? 'var(--dark)' : 'var(--light)')};
+	box-shadow: 0 0 3px 0 var(--dark);
 `;
 
 export const Nav = styled.nav`
@@ -31,11 +32,10 @@ export const MenuIcon = styled.div`
 		display: block;
 		margin-top: 5px;
 		padding: 5px 5px;
-		color: var(--light);
-		font-size: var(--h2);
+		color: ${({ darkmode }) => (darkmode ? 'var(--light)' : 'var(--dark)')};
+		font-size: var(--h3);
 		transition: 0.15s ease-in-out;
 		cursor: pointer;
-
 		&:hover {
 			color: var(--hover);
 			transition: 0.15s ease-in-out;
@@ -49,7 +49,7 @@ export const Menu = styled.ul`
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-
+	color: ${({ darkmode }) => (darkmode ? 'var(--light)' : 'var(--dark)')};
 	@media screen and (max-width: 750px) {
 		display: none;
 	}
@@ -58,22 +58,20 @@ export const Menu = styled.ul`
 export const Link = styled(LinkScroll)`
 	text-decoration: none;
 	padding: 5px 15px;
-	color: var(--light);
 	font-size: var(--h3);
 	transition: 0.15s ease-in-out;
 	cursor: pointer;
-
 	&:hover {
 		color: var(--hover);
 		transition: 0.15s ease-in-out;
 	}
-
 	&.active {
 		border-bottom: 3px solid var(--accent);
 	}
 `;
 
 export const ButtonBox = styled.div`
+	margin: 0 5px;
 	@media screen and (max-width: 750px) {
 		display: none;
 	}

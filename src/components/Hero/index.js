@@ -18,13 +18,10 @@ const Hero = () => {
 				<VideoBG autoPlay muted loop src={Video} type="video/mp4" />
 			</SectionBG>
 			<Content>
-				<Title>Virtual Banking Made Simple</Title>
-				<Subtitle>
-					Sign up for a new account and receive $250 in credit towards your next
-					payment.
-				</Subtitle>
+				<Title>dev3.ai</Title>
+				<Subtitle>Shopify web development</Subtitle>
 				<ButtonBox>
-					<Button to="signup">Sign Up</Button>
+					<Button to="about">Learn more</Button>
 				</ButtonBox>
 			</Content>
 		</Section>

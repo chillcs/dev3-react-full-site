@@ -7,15 +7,17 @@ export const Logo = styled(LinkRoute)`
 	border: none;
 	white-space: nowrap;
 	padding: 5px 5px;
-	color: var(--light);
+	color: ${({ darkmode }) => (darkmode ? 'var(--light)' : 'var(--dark)')};
 	font-size: var(--h2);
 	font-weight: 500;
 	transition: all 0.15s ease-in-out;
 	cursor: pointer;
-
 	&:hover {
 		color: var(--hover);
 		transition: 0.15s ease-in-out;
+	}
+	@media screen and (max-width: 750px) {
+		font-size: var(--h3);
 	}
 `;
 
@@ -26,15 +28,13 @@ export const Button = styled(LinkRoute)`
 	white-space: nowrap;
 	background: var(--accent);
 	color: var(--light);
-	margin: 5px 5px;
+	margin: 5px 0;
 	padding: 10px 25px;
 	font-size: var(--h3);
 	transition: all 0.15s ease-in-out;
 	cursor: pointer;
-
 	&:hover {
 		transition: all 0.15s ease-in-out;
-		background: var(--light);
-		color: var(--accent);
+		background: var(--hover);
 	}
 `;

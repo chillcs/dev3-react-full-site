@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Section = styled.div`
-	z-index: 1;
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -19,7 +18,6 @@ export const SectionBG = styled.div`
 	left: 0;
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
 `;
 
 export const VideoBG = styled.video`
@@ -28,11 +26,11 @@ export const VideoBG = styled.video`
 	-o-object-fit: cover;
 	object-fit: cover;
 	background: var(--light);
-	opacity: 25%;
+	opacity: 100%;
 `;
 
 export const Content = styled.div`
-	z-index: 3;
+	z-index: 5;
 	position: absolute;
 	max-width: 650px;
 	display: flex;
@@ -46,7 +44,6 @@ export const Title = styled.div`
 	font-size: var(--h1);
 	text-align: center;
 	padding: 15px 0;
-
 	@media screen and (max-width: 750px) {
 		font-size: var(--h2);
 	}
@@ -56,7 +53,6 @@ export const Subtitle = styled.div`
 	color: var(--light);
 	font-size: var(--h2);
 	text-align: center;
-
 	@media screen and (max-width: 750px) {
 		font-size: var(--h3);
 	}

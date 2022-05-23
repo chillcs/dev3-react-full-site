@@ -14,7 +14,7 @@ export const Sidebar = styled.aside`
 	justify-content: center;
 	align-items: center;
 	gap: 15%;
-	background: var(--dark);
+	background: var(--medium);
 	transition: 0.3s ease-in-out;
 	top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
 	opacity: ${({ isOpen }) => (isOpen ? '100%' : '0%')};
@@ -25,14 +25,16 @@ export const Icon = styled(FiX)`
 	top: 20px;
 	right: 25px;
 	margin-top: 5px;
-	color: var(--light);
+	color: var(--dark);
 	font-size: var(--h2);
 	transition: 0.15s ease-in-out;
 	cursor: pointer;
-
 	&:hover {
 		color: var(--hover);
 		transition: 0.15s ease-in-out;
+	}
+	@media screen and (max-width: 750px) {
+		font-size: var(--h3);
 	}
 `;
 
@@ -42,15 +44,14 @@ export const Menu = styled.div`
 	justify-content: center;
 	align-items: center;
 	gap: 25px;
+	color: var(--dark);
 `;
 
 export const Link = styled(LinkScroll)`
 	padding: 5px 50px;
-	color: var(--light);
 	font-size: var(--h3);
 	transition: 0.15s ease-in-out;
 	cursor: pointer;
-
 	&:hover {
 		color: var(--hover);
 		transition: 0.15s ease-in-out;

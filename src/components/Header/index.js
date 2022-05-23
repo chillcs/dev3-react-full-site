@@ -14,10 +14,11 @@ const Header = ({ toggle, darkmode }) => {
 						<FiMenu />
 					</MenuIcon>
 					<Menu darkmode={darkmode}>
-						<Link to="about">about</Link>
+						<Link to="about">about us</Link>
+						<Link to="technologies">technologies</Link>
 						<Link to="services">services</Link>
-						<Link to="portfolio">portfolio</Link>
-						<Link to="contact">contact</Link>
+						<Link to="portfolio">our work</Link>
+						<Link to="contact">let's chat</Link>
 					</Menu>
 					<ButtonBox>
 						<Button to="/upwork">upwork</Button>

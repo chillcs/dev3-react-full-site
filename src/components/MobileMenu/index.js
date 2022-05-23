@@ -10,16 +10,19 @@ const MobileMenu = ({ isOpen, toggle }) => {
 			</Logo>
 			<Menu>
 				<Link to="about" onClick={toggle}>
-					About
+					about us
+				</Link>
+				<Link to="technologies" onClick={toggle}>
+					technologies
 				</Link>
 				<Link to="services" onClick={toggle}>
-					Services
+					services
 				</Link>
 				<Link to="portfolio" onClick={toggle}>
-					Portfolio
+					our work
 				</Link>
 				<Link to="contact" onClick={toggle}>
-					Contact
+					let's chat
 				</Link>
 			</Menu>
 			<Button to="/upwork" onClick={toggle}>

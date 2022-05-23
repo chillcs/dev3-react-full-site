@@ -2,7 +2,8 @@ import Header from '../components/Header/index';
 import MobileMenu from '../components/MobileMenu/index';
 import Hero from '../components/Hero/index';
 import Section from '../components/Sections/index';
-import { about, services, portfolio } from '../components/Sections/Data';
+import { about, technologies } from '../components/Sections/Data';
+import Services from '../components/Services';
 import React, { useState } from 'react';
 
 const Home = () => {
@@ -18,8 +19,8 @@ const Home = () => {
 			<MobileMenu isOpen={isOpen} toggle={toggle} />
 			<Hero />
 			<Section {...about} />
-			<Section {...services} />
-			<Section {...portfolio} />
+			<Section {...technologies} />
+			<Services />
 		</>
 	);
 };

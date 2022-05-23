@@ -34,7 +34,7 @@ export const Icon = styled(FiX)`
 		transition: 0.15s ease-in-out;
 	}
 	@media screen and (max-width: 750px) {
-		font-size: var(--h3);
+		font-size: var(--h2);
 	}
 `;
 

@@ -16,9 +16,6 @@ export const Logo = styled(LinkRoute)`
 		color: var(--hover);
 		transition: 0.15s ease-in-out;
 	}
-	@media screen and (max-width: 750px) {
-		font-size: var(--h3);
-	}
 `;
 
 export const Button = styled(LinkRoute)`
@@ -31,6 +28,7 @@ export const Button = styled(LinkRoute)`
 	margin: 5px 0;
 	padding: 10px 25px;
 	font-size: var(--h3);
+	border-radius: 5px;
 	transition: all 0.15s ease-in-out;
 	cursor: pointer;
 	&:hover {

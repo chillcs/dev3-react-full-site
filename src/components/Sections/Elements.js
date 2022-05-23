@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Section = styled.div`
-	background: ${({ darkmode }) =>
-		darkmode ? 'var(--medium)' : 'var(--light)'};
+	background: ${({ alternateBG }) =>
+		alternateBG ? 'var(--medium)' : 'var(--light)'};
 `;
 
 export const Row = styled.div`
@@ -10,10 +10,11 @@ export const Row = styled.div`
 	flex-direction: ${({ imageFirst }) => (imageFirst ? 'row-reverse' : 'row')};
 	justify-content: space-between;
 	align-items: center;
+	min-height: calc(100vh - var(--header));
 	width: 100%;
 	max-width: 1100px;
-	min-height: calc(100vh - var(--header));
-	margin: 0 auto;
+	margin: auto;
+	padding: 25px 0;
 	@media screen and (max-width: 900px) {
 		flex-direction: column;
 		justify-content: space-evenly;
@@ -31,22 +32,16 @@ export const Column = styled.div`
 `;
 
 export const Text = styled.div`
-	color: ${({ darkmode }) => (darkmode ? 'var(--light)' : 'var(--dark)')};
+	color: var(--dark);
 `;
 
 export const Subtitle = styled.div`
 	position: relative;
-	font-size: var(--h2);
 	padding: 10px 0;
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: 5px;
-		left: 2px;
-		width: 25px;
-		height: 3px;
-		background: var(--accent);
-	}
+	font-size: var(--h2);
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
 	@media screen and (max-width: 750px) {
 		font-size: var(--h3);
 	}
@@ -58,11 +53,6 @@ export const Title = styled.div`
 	@media screen and (max-width: 750px) {
 		font-size: var(--h2);
 	}
-`;
-
-export const Description = styled.div`
-	font-size: var(--p);
-	padding: 10px 0;
 `;
 
 export const ButtonBox = styled.div`

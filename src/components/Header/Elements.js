@@ -12,7 +12,7 @@ export const Navbar = styled.div`
 	justify-content: center;
 	align-items: center;
 	background: ${({ darkmode }) => (darkmode ? 'var(--dark)' : 'var(--light)')};
-	box-shadow: 0 0 3px 0 var(--dark);
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 `;
 
 export const Nav = styled.nav`
@@ -27,13 +27,12 @@ export const Nav = styled.nav`
 
 export const MenuIcon = styled.div`
 	display: none;
-
 	@media screen and (max-width: 750px) {
 		display: block;
 		margin-top: 5px;
 		padding: 5px 5px;
 		color: ${({ darkmode }) => (darkmode ? 'var(--light)' : 'var(--dark)')};
-		font-size: var(--h3);
+		font-size: var(--h2);
 		transition: 0.15s ease-in-out;
 		cursor: pointer;
 		&:hover {

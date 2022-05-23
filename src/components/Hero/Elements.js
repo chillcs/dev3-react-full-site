@@ -6,6 +6,7 @@ export const Section = styled.div`
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	min-height: 500px;
 	padding: 0 30px;
 	background: #000;
 `;

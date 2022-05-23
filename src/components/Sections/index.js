@@ -7,7 +7,6 @@ import {
 	Text,
 	Subtitle,
 	Title,
-	Description,
 	ButtonBox,
 	Image,
 } from './Elements';
@@ -16,24 +15,22 @@ import { Button } from '../Reusable/Elements';
 
 const About = ({
 	id,
-	darkmode,
+	alternateBG,
 	imageFirst,
 	subtitle,
 	title,
-	description,
 	buttonText,
 	image,
 	alt,
 }) => {
 	return (
 		<>
-			<Section id={id} darkmode={darkmode}>
+			<Section id={id} alternateBG={alternateBG}>
 				<Row imageFirst={imageFirst}>
 					<Column>
-						<Text darkmode={darkmode}>
+						<Text>
 							<Subtitle>{subtitle}</Subtitle>
 							<Title>{title}</Title>
-							<Description>{description}</Description>
 						</Text>
 						<ButtonBox>
 							<Button

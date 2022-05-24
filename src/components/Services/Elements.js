@@ -11,23 +11,24 @@ export const Section = styled.div`
 	background: var(--dark);
 `;
 
+export const Subtitle = styled.div`
+	padding: 10px 0;
+	font-size: var(--h2);
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: var(--light);
+	@media screen and (max-width: 750px) {
+		font-size: var(--h3);
+	}
+`;
+
 export const Title = styled.div`
 	font-size: var(--h1);
 	font-weight: 300;
 	color: var(--light);
 	@media screen and (max-width: 750px) {
 		font-size: var(--h2);
-	}
-`;
-export const Subtitle = styled.div`
-	padding: 10px 0;
-	font-size: var(--h2);
-	text-transform: uppercase;
-	font-weight: 500;
-	letter-spacing: 2px;
-	color: var(--light);
-	@media screen and (max-width: 750px) {
-		font-size: var(--h3);
 	}
 `;
 

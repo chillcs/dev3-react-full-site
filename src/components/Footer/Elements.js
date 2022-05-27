@@ -6,73 +6,83 @@ export const Section = styled.div`
 `;
 
 export const Row = styled.div`
-	padding: 48px 24px;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 	max-width: 1100px;
-	margin: 0 auto;
+	margin: auto;
+	padding: 50px 10px;
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+	}
 `;
 
 export const InfoColumn = styled.div`
 	display: flex;
 	flex-direction: column;
+	width: 50%;
+	padding: 10px 15px;
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+		width: 100%;
+	}
 `;
 
 export const LinkColumn = styled.div`
 	display: flex;
-	justify-content: center;
-	@media screen and (max-width: 750px) {
-		padding-top: 32px;
+	flex-direction: column;
+	width: 25%;
+	padding: 10px 15px;
+	@media screen and (max-width: 600px) {
+		flex-direction: column;
+		width: 100%;
 	}
 `;
 
 export const Logo = styled.div`
 	font-size: var(--h3);
+	margin: 15px 0;
 `;
 
 export const Paragraph = styled.div`
-	font-size: var(--p);
+	max-width: 80%;
+	font-size: var(--small);
 `;
 
 export const IconBox = styled.div`
 	display: flex;
+	margin: 15px 0;
 `;
 
 export const Icon = styled.div`
-	width: 25px;
-	height: 25px;
+	padding: 0 15px;
 `;
 
 export const LinkTitle = styled.div`
-	font-size: var(--h2);
+	font-size: var(--h3);
+	margin: 15px 0;
 `;
 
 export const LinkItems = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
-	margin: 16px;
-	text-align: left;
-	width: 160px;
-	box-sizing: border-box;
-	color: #fff;
+
 	@media screen and (max-width: 750px) {
-		margin: 0;
-		padding: 10px;
-		width: 100%;
 	}
 `;
 
 export const FooterLink = styled(Link)`
-	color: #fff;
-	text-decoration: none;
-	margin-bottom: 0.5rem;
-	font-size: 14px;
+	padding: 5px 10px;
+	font-size: var(--small);
+	color: var(--dark);
 	transition: 0.15s ease-in-out;
 	&:hover {
 		color: var(--hover);
 		transition: 0.15s ease-in-out;
 	}
+`;
+
+export const Copyright = styled.div`
+	width: 100%;
+	padding-bottom: 25px;
+	font-size: var(--xs);
+	text-align: center;
 `;

@@ -11,6 +11,7 @@ import {
 	LinkTitle,
 	LinkItems,
 	FooterLink,
+	Copyright,
 } from './Elements';
 
 const Footer = () => {
@@ -22,6 +23,11 @@ const Footer = () => {
 						<Logo>dev3.ai</Logo>
 						<Paragraph>
 							Some text about the company and why you should work with us
+							<br></br>
+							<br></br>
+							PO Box XXX<br></br>
+							Some something<br></br>
+							Something else<br></br>
 						</Paragraph>
 						<IconBox>
 							<Icon>Upwork</Icon>
@@ -30,7 +36,7 @@ const Footer = () => {
 						</IconBox>
 					</InfoColumn>
 					<LinkColumn>
-						<LinkTitle>company</LinkTitle>
+						<LinkTitle>about</LinkTitle>
 						<LinkItems>
 							<FooterLink to="/about">about</FooterLink>
 							<FooterLink to="/technologies">technologies</FooterLink>
@@ -49,6 +55,7 @@ const Footer = () => {
 						</LinkItems>
 					</LinkColumn>
 				</Row>
+				<Copyright>© 2022 Dev3.ai</Copyright>
 			</Section>
 		</>
 	);

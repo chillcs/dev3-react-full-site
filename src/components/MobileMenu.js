@@ -1,7 +1,7 @@
-import { Logo, Button } from './Elements';
+import { Logo, BtnScroll } from './Elements';
 import { FiX } from 'react-icons/fi';
 import { Link as Scroll, animateScroll } from 'react-scroll';
-import mainMenu from './Nav/Main.json';
+import main from './Nav/Main.json';
 import styled from 'styled-components';
 
 const MobileMenu = ({ isOpen, toggle }) => {
@@ -18,15 +18,14 @@ const MobileMenu = ({ isOpen, toggle }) => {
 					dev3.ai
 				</Logo>
 				<Menu>
-					{mainMenu.map((navitem) => {
+					{main.map((navitem) => {
 						return (
 							<Link
 								key={navitem.id}
 								to={navitem.to}
-								spy={true}
-								smooth={true}
+								smooth="true"
 								exact="true"
-								offset={-80}
+								offset={-65}
 								duration={500}
 								onClick={toggle}
 							>
@@ -35,9 +34,16 @@ const MobileMenu = ({ isOpen, toggle }) => {
 						);
 					})}
 				</Menu>
-				<Button to="/upwork" onClick={toggle}>
-					upwork
-				</Button>
+				<BtnScroll
+					to="contact"
+					smooth="true"
+					exact="true"
+					offset={-65}
+					duration={500}
+					onClick={toggle}
+				>
+					Let's chat
+				</BtnScroll>
 			</Sidebar>
 		</>
 	);
@@ -67,8 +73,8 @@ export const Sidebar = styled.aside`
 
 export const Icon = styled(FiX)`
 	position: absolute;
-	top: 20px;
-	right: 25px;
+	top: 10px;
+	right: 15px;
 	margin-top: 5px;
 	color: var(--dark);
 	font-size: var(--h2);

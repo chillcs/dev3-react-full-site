@@ -1,8 +1,8 @@
 import { Logo } from './Elements';
 import { Link as Scroll, animateScroll } from 'react-scroll';
 import { Link as Route } from 'react-router-dom';
-import navMain from './Nav/Main.json';
-import navLegal from './Nav/Legal.json';
+import footer1 from './Nav/Footer1.json';
+import footer2 from './Nav/Footer2.json';
 import styled from 'styled-components';
 
 const Footer = () => {
@@ -35,14 +35,14 @@ const Footer = () => {
 					<LinkColumn>
 						<LinkTitle>about</LinkTitle>
 						<LinkItems>
-							{navMain.map((navitem) => {
+							{footer1.map((navitem) => {
 								return (
 									<FooterScroll
 										key={navitem.id}
 										to={navitem.to}
-										spy={true}
-										smooth={true}
-										offset={-80}
+										smooth="true"
+										exact="true"
+										offset={-65}
 										duration={500}
 									>
 										{navitem.title}
@@ -54,14 +54,14 @@ const Footer = () => {
 					<LinkColumn>
 						<LinkTitle>more</LinkTitle>
 						<LinkItems>
-							{navLegal.map((navitem) => {
+							{footer2.map((navitem) => {
 								return (
 									<FooterRoute
 										key={navitem.id}
 										to={navitem.to}
-										spy={true}
-										smooth={true}
-										offset={-80}
+										smooth="true"
+										exact="true"
+										offset={-65}
 										duration={500}
 									>
 										{navitem.title}

@@ -1,7 +1,7 @@
-import { Logo, Button } from './Elements';
+import { Logo, BtnScroll } from './Elements';
 import { FiMenu } from 'react-icons/fi';
 import { Link as Scroll, animateScroll } from 'react-scroll';
-import navMain from './Nav/Main.json';
+import main from './Nav/Main.json';
 import styled from 'styled-components';
 
 const Header = ({ toggle, darkmode }) => {
@@ -20,15 +20,16 @@ const Header = ({ toggle, darkmode }) => {
 						<FiMenu />
 					</MenuIcon>
 					<Menu darkmode={darkmode}>
-						{navMain.map((navitem) => {
+						{main.map((navitem) => {
 							return (
 								<Link
 									key={navitem.id}
 									to={navitem.to}
-									spy={true}
-									smooth={true}
-									offset={-80}
+									smooth="true"
+									exact="true"
+									offset={-65}
 									duration={500}
+									spy={true}
 								>
 									{navitem.title}
 								</Link>
@@ -36,7 +37,15 @@ const Header = ({ toggle, darkmode }) => {
 						})}
 					</Menu>
 					<ButtonBox>
-						<Button to="/upwork">upwork</Button>
+						<BtnScroll
+							to="contact"
+							smooth="true"
+							exact="true"
+							offset={-65}
+							duration={500}
+						>
+							Let's chat
+						</BtnScroll>
 					</ButtonBox>
 				</Nav>
 			</Navbar>
@@ -60,16 +69,17 @@ export const Navbar = styled.div`
 	align-items: center;
 	background: ${({ darkmode }) => (darkmode ? 'var(--dark)' : 'var(--light)')};
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+	opacity: 95%;
 `;
 
 export const Nav = styled.nav`
 	position: relative;
 	width: 100%;
-	max-width: 1100px;
+	max-width: 1000px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 5px 20px;
+	padding: 5px 10px;
 `;
 
 export const MenuIcon = styled.div`
@@ -90,10 +100,12 @@ export const MenuIcon = styled.div`
 `;
 
 export const Menu = styled.ul`
-	list-style: none;
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	min-width: 500px;
+	display: flex;
+	justify-content: center;
 	transform: translate(-50%, -50%);
 	color: ${({ darkmode }) => (darkmode ? 'var(--light)' : 'var(--dark)')};
 	@media screen and (max-width: 750px) {

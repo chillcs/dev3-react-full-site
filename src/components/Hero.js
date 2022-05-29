@@ -1,4 +1,4 @@
-import { Heading, Subheading, Button } from './Elements';
+import { Heading, Subheading, BtnScroll } from './Elements';
 import Video from './../videos/hero1280.mp4';
 import styled from 'styled-components';
 
@@ -13,7 +13,15 @@ const Hero = (props) => {
 					<Heading>{props.heading}</Heading>
 					<Subheading>{props.subheading}</Subheading>
 					<ButtonBox>
-						<Button to="about">{props.buttonText}</Button>
+						<BtnScroll
+							to="about"
+							smooth="true"
+							exact="true"
+							offset={-65}
+							duration={500}
+						>
+							{props.btnText}
+						</BtnScroll>
 					</ButtonBox>
 				</Content>
 			</Section>

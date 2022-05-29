@@ -1,4 +1,4 @@
-import { Title, Subtitle, Button } from './Elements';
+import { Title, Subtitle, BtnScroll } from './Elements';
 import styled from 'styled-components';
 
 const InfoSection = (props) => {
@@ -12,7 +12,15 @@ const InfoSection = (props) => {
 							<Subtitle>{props.subtitle}</Subtitle>
 						</Text>
 						<ButtonBox>
-							<Button to="home">{props.buttonText}</Button>
+							<BtnScroll
+								to="contact"
+								smooth="true"
+								exact="true"
+								offset={-65}
+								duration={500}
+							>
+								{props.btnText}
+							</BtnScroll>
 						</ButtonBox>
 					</Column>
 					<Column>

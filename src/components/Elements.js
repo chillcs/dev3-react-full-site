@@ -1,3 +1,4 @@
+import { Link as Scroll } from 'react-scroll';
 import { Link as Route } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -18,7 +19,7 @@ export const Logo = styled(Route)`
 	}
 `;
 
-export const Button = styled(Route)`
+export const BtnScroll = styled(Scroll)`
 	text-decoration: none;
 	outline: none;
 	border: none;
@@ -28,7 +29,26 @@ export const Button = styled(Route)`
 	margin: 5px 0;
 	padding: 10px 25px;
 	font-size: var(--h3);
-	border-radius: 5px;
+	border-radius: 0px;
+	transition: all 0.15s ease-in-out;
+	cursor: pointer;
+	&:hover {
+		transition: all 0.15s ease-in-out;
+		background: var(--hover);
+	}
+`;
+
+export const BtnRoute = styled(Route)`
+	text-decoration: none;
+	outline: none;
+	border: none;
+	white-space: nowrap;
+	background: var(--accent);
+	color: var(--light);
+	margin: 5px 0;
+	padding: 10px 25px;
+	font-size: var(--h3);
+	border-radius: 0px;
 	transition: all 0.15s ease-in-out;
 	cursor: pointer;
 	&:hover {

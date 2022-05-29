@@ -13,12 +13,12 @@ font-family: 'Smooch Sans', sans-serif;
 	--dark: #3F3D56;
 	--accent: #860F1C;
   --hover: #bA0A0A;
-  --h1: 55px;
-  --h2: 35px;
-  --h3: 25px;
-  --p: 21px;
+  --h1: 48px;
+  --h2: 32px;
+  --h3: 21px;
+  --p: 18px;
   --xs: 15px;
-  --header: 80px;
+  --header: 65px;
 }
 
 *, html {

@@ -22,7 +22,7 @@ const Home = () => {
 				id="hero"
 				heading="dev3.ai"
 				subheading="Shopify web development"
-				buttonText="Learn more"
+				btnText="Learn more"
 			/>
 			<ImageText
 				id="about"
@@ -30,7 +30,7 @@ const Home = () => {
 				alternateBG={false}
 				title="About Us"
 				subtitle="We are a full service Shopify development agency"
-				buttonText="Let's chat"
+				btnText="Let's chat"
 				image="../../images/shop.png"
 				alt="responsive design"
 			/>
@@ -40,7 +40,7 @@ const Home = () => {
 				alternateBG={true}
 				title="Technologies"
 				subtitle="Specializing in HTML, CSS, JavaScript, Liquid, and React"
-				buttonText="Let's chat"
+				btnText="Let's chat"
 				image="../../images/code.png"
 				alt="programming languages"
 			/>

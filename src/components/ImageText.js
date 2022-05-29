@@ -1,4 +1,32 @@
+import { Title, Subtitle, Button } from './Elements';
 import styled from 'styled-components';
+
+const InfoSection = (props) => {
+	return (
+		<>
+			<Section id={props.id} alternateBG={props.alternateBG}>
+				<Row imageFirst={props.imageFirst}>
+					<Column>
+						<Text>
+							<Title>{props.title}</Title>
+							<Subtitle>{props.subtitle}</Subtitle>
+						</Text>
+						<ButtonBox>
+							<Button to="home">{props.buttonText}</Button>
+						</ButtonBox>
+					</Column>
+					<Column>
+						<Image src={props.image} alt={props.alt} />
+					</Column>
+				</Row>
+			</Section>
+		</>
+	);
+};
+
+export default InfoSection;
+
+/* Styles --- */
 
 export const Section = styled.div`
 	background: ${({ alternateBG }) =>
@@ -33,26 +61,6 @@ export const Column = styled.div`
 
 export const Text = styled.div`
 	color: var(--dark);
-`;
-
-export const Subtitle = styled.div`
-	position: relative;
-	padding: 10px 0;
-	font-size: var(--h2);
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: 2px;
-	@media screen and (max-width: 750px) {
-		font-size: var(--h3);
-	}
-`;
-
-export const Title = styled.div`
-	font-size: var(--h1);
-	padding: 10px 0;
-	@media screen and (max-width: 750px) {
-		font-size: var(--h2);
-	}
 `;
 
 export const ButtonBox = styled.div`

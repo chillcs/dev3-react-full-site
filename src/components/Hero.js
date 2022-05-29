@@ -1,4 +1,29 @@
+import { Heading, Subheading, Button } from './Elements';
+import Video from './../videos/hero1280.mp4';
 import styled from 'styled-components';
+
+const Hero = (props) => {
+	return (
+		<>
+			<Section>
+				<SectionBG>
+					<VideoBG autoPlay muted loop src={Video} type="video/mp4" />
+				</SectionBG>
+				<Content>
+					<Heading>{props.heading}</Heading>
+					<Subheading>{props.subheading}</Subheading>
+					<ButtonBox>
+						<Button to="about">{props.buttonText}</Button>
+					</ButtonBox>
+				</Content>
+			</Section>
+		</>
+	);
+};
+
+export default Hero;
+
+/* Styles --- */
 
 export const Section = styled.div`
 	position: relative;
@@ -39,24 +64,6 @@ export const Content = styled.div`
 	justify-content: center;
 	align-items: center;
 	padding: 0px 25px;
-`;
-export const Title = styled.div`
-	color: var(--light);
-	font-size: var(--h1);
-	text-align: center;
-	padding: 15px 0;
-	@media screen and (max-width: 750px) {
-		font-size: var(--h2);
-	}
-`;
-
-export const Subtitle = styled.div`
-	color: var(--light);
-	font-size: var(--h2);
-	text-align: center;
-	@media screen and (max-width: 750px) {
-		font-size: var(--h3);
-	}
 `;
 
 export const ButtonBox = styled.div`

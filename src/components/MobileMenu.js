@@ -1,6 +1,51 @@
-import styled from 'styled-components';
-import { Link as LinkScroll } from 'react-scroll';
+import { Logo, Button } from './Elements';
 import { FiX } from 'react-icons/fi';
+import { Link as Scroll, animateScroll } from 'react-scroll';
+import mainMenu from './Nav/Main.json';
+import styled from 'styled-components';
+
+const MobileMenu = ({ isOpen, toggle }) => {
+	const goHome = () => {
+		animateScroll.scrollToTop();
+		toggle();
+	};
+
+	return (
+		<>
+			<Sidebar isOpen={isOpen}>
+				<Icon onClick={toggle} />
+				<Logo to="/" onClick={goHome}>
+					dev3.ai
+				</Logo>
+				<Menu>
+					{mainMenu.map((navitem) => {
+						return (
+							<Link
+								key={navitem.id}
+								to={navitem.to}
+								spy={true}
+								smooth={true}
+								exact="true"
+								offset={-80}
+								duration={500}
+								onClick={toggle}
+							>
+								{navitem.title}
+							</Link>
+						);
+					})}
+				</Menu>
+				<Button to="/upwork" onClick={toggle}>
+					upwork
+				</Button>
+			</Sidebar>
+		</>
+	);
+};
+
+export default MobileMenu;
+
+/* Styles --- */
 
 export const Sidebar = styled.aside`
 	z-index: 100;
@@ -47,7 +92,7 @@ export const Menu = styled.div`
 	color: var(--dark);
 `;
 
-export const Link = styled(LinkScroll)`
+export const Link = styled(Scroll)`
 	padding: 5px 50px;
 	font-size: var(--h3);
 	transition: 0.15s ease-in-out;

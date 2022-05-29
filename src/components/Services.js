@@ -1,4 +1,52 @@
+import { Title, Subtitle } from './Elements';
+import icon1 from './../images/design.png';
+import icon2 from './../images/develop.png';
+import icon3 from './../images/secure.png';
 import styled from 'styled-components';
+
+const Services = (props) => {
+	return (
+		<>
+			<Section id={props.id}>
+				<Title>{props.title}</Title>
+				<Subtitle>{props.subtitle}</Subtitle>
+				<Content>
+					<Card>
+						<Icon src={icon1} />
+						<Text>
+							<Heading>Design</Heading>
+							<Paragraph>
+								Our talented designers will bring your ideas to life
+							</Paragraph>
+						</Text>
+					</Card>
+					<Card>
+						<Icon src={icon2} />
+						<Text>
+							<Heading>Develop</Heading>
+							<Paragraph>
+								Our skilled developers will turn the designs into code
+							</Paragraph>
+						</Text>
+					</Card>
+					<Card>
+						<Icon src={icon3} />
+						<Text>
+							<Heading>Launch</Heading>
+							<Paragraph>
+								Upon rigerous QA and testing we will launch and go live
+							</Paragraph>
+						</Text>
+					</Card>
+				</Content>
+			</Section>
+		</>
+	);
+};
+
+export default Services;
+
+/* Styles --- */
 
 export const Section = styled.div`
 	display: flex;
@@ -9,27 +57,6 @@ export const Section = styled.div`
 	min-height: calc(100vh - var(--header));
 	padding: 50px 25px;
 	background: var(--dark);
-`;
-
-export const Subtitle = styled.div`
-	padding: 10px 0;
-	font-size: var(--h2);
-	text-transform: uppercase;
-	font-weight: 700;
-	letter-spacing: 2px;
-	color: var(--light);
-	@media screen and (max-width: 750px) {
-		font-size: var(--h3);
-	}
-`;
-
-export const Title = styled.div`
-	font-size: var(--h1);
-	font-weight: 300;
-	color: var(--light);
-	@media screen and (max-width: 750px) {
-		font-size: var(--h2);
-	}
 `;
 
 export const Content = styled.div`

@@ -1,0 +1,27 @@
+[
+   {
+      "id": 0,
+      "title": "FAQ",
+      "to": "/faq"
+   },
+   {
+      "id": 1,
+      "title": "careers",
+      "to": "/careers"
+   },
+   {
+      "id": 2,
+      "title": "terms of service",
+      "to": "/terms"
+   },
+   {
+      "id": 3,
+      "title": "privacy policy",
+      "to": "/privacy"
+   },
+   {
+      "id": 4,
+      "title": "remit",
+      "to": "/remit"
+   }
+]

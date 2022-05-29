@@ -1,5 +1,52 @@
+import { Logo, Button } from './Elements';
+import { FiMenu } from 'react-icons/fi';
+import { Link as Scroll, animateScroll } from 'react-scroll';
+import navMain from './Nav/Main.json';
 import styled from 'styled-components';
-import { Link as LinkScroll } from 'react-scroll';
+
+const Header = ({ toggle, darkmode }) => {
+	const goHome = () => {
+		animateScroll.scrollToTop();
+	};
+
+	return (
+		<>
+			<Navbar darkmode={darkmode}>
+				<Nav>
+					<Logo to="/" onClick={goHome} darkmode={darkmode}>
+						dev3.ai
+					</Logo>
+					<MenuIcon onClick={toggle} darkmode={darkmode}>
+						<FiMenu />
+					</MenuIcon>
+					<Menu darkmode={darkmode}>
+						{navMain.map((navitem) => {
+							return (
+								<Link
+									key={navitem.id}
+									to={navitem.to}
+									spy={true}
+									smooth={true}
+									offset={-80}
+									duration={500}
+								>
+									{navitem.title}
+								</Link>
+							);
+						})}
+					</Menu>
+					<ButtonBox>
+						<Button to="/upwork">upwork</Button>
+					</ButtonBox>
+				</Nav>
+			</Navbar>
+		</>
+	);
+};
+
+export default Header;
+
+/* Styles --- */
 
 export const Navbar = styled.div`
 	z-index: 10;
@@ -54,7 +101,7 @@ export const Menu = styled.ul`
 	}
 `;
 
-export const Link = styled(LinkScroll)`
+export const Link = styled(Scroll)`
 	text-decoration: none;
 	padding: 5px 15px;
 	font-size: var(--h3);

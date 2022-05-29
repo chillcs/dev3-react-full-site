@@ -19,7 +19,7 @@ export const Logo = styled(Route)`
 	}
 `;
 
-export const BtnScroll = styled(Scroll)`
+export const BtnS = styled(Scroll)`
 	text-decoration: none;
 	outline: none;
 	border: none;
@@ -38,7 +38,7 @@ export const BtnScroll = styled(Scroll)`
 	}
 `;
 
-export const BtnRoute = styled(Route)`
+export const BtnR = styled(Route)`
 	text-decoration: none;
 	outline: none;
 	border: none;
@@ -59,44 +59,41 @@ export const BtnRoute = styled(Route)`
 
 export const Section = styled.div`
 	min-height: calc(100vh - var(--header));
-	background: var(--medium);
+	width: 100%;
+	margin: 0 auto;
+	padding: 75px 0;
+	background: ${(props) => props.background};
+`;
+
+export const Wrapper = styled.div`
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 15px;
 `;
 
 export const Heading = styled.div`
 	color: var(--light);
 	font-size: var(--h1);
-	text-align: center;
 	padding: 15px 0;
-	@media screen and (max-width: 750px) {
-		font-size: var(--h2);
-	}
 `;
 
 export const Subheading = styled.div`
 	color: var(--light);
 	font-size: var(--h2);
-	text-align: center;
-	@media screen and (max-width: 750px) {
-		font-size: var(--h3);
-	}
 `;
 
 export const Title = styled.div`
-	position: relative;
-	padding: 10px 0;
+	color: ${(props) => props.color};
 	font-size: var(--h2);
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 2px;
-	@media screen and (max-width: 750px) {
-		font-size: var(--h3);
-	}
 `;
 
 export const Subtitle = styled.div`
+	color: ${(props) => props.color};
 	font-size: var(--h1);
-	padding: 10px 0;
-	@media screen and (max-width: 750px) {
+	@media screen and (max-width: 500px) {
 		font-size: var(--h2);
 	}
 `;

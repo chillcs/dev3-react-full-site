@@ -1,85 +1,89 @@
-import { Title, Subtitle, BtnScroll } from './Elements';
+import { Section, Wrapper, Title, Subtitle, BtnS } from './Elements';
 import styled from 'styled-components';
 
-const InfoSection = (props) => {
+const ImageText = (props) => {
 	return (
 		<>
-			<Section id={props.id} alternateBG={props.alternateBG}>
-				<Row imageFirst={props.imageFirst}>
-					<Column>
-						<Text>
-							<Title>{props.title}</Title>
-							<Subtitle>{props.subtitle}</Subtitle>
-						</Text>
-						<ButtonBox>
-							<BtnScroll
-								to="contact"
-								smooth="true"
-								exact="true"
-								offset={-65}
-								duration={500}
-							>
-								{props.btnText}
-							</BtnScroll>
-						</ButtonBox>
-					</Column>
-					<Column>
-						<Image src={props.image} alt={props.alt} />
-					</Column>
-				</Row>
+			<Section id={props.id} background={props.background}>
+				<Wrapper>
+					<Row imageFirst={props.imageFirst}>
+						<Column imageFirst={props.imageFirst}>
+							<Title color={props.color}>{props.title}</Title>
+							<Subtitle color={props.color}>{props.subtitle}</Subtitle>
+							<ButtonBox imageFirst={props.imageFirst}>
+								<BtnS
+									to="contact"
+									smooth="true"
+									exact="true"
+									offset={-65}
+									duration={500}
+								>
+									{props.btnText}
+								</BtnS>
+							</ButtonBox>
+						</Column>
+						<Column>
+							<Image
+								src={require(`../images/${props.image}`)}
+								alt={props.alt}
+							/>
+						</Column>
+					</Row>
+				</Wrapper>
 			</Section>
 		</>
 	);
 };
 
-export default InfoSection;
+export default ImageText;
 
 /* Styles --- */
 
-export const Section = styled.div`
-	background: ${({ alternateBG }) =>
-		alternateBG ? 'var(--medium)' : 'var(--light)'};
-`;
-
 export const Row = styled.div`
 	display: flex;
-	flex-direction: ${({ imageFirst }) => (imageFirst ? 'row-reverse' : 'row')};
+	flex-direction: ${(props) => (props.imageFirst ? 'row-reverse' : 'row')};
 	justify-content: space-between;
 	align-items: center;
-	min-height: calc(100vh - var(--header));
-	width: 100%;
-	max-width: 1100px;
-	margin: auto;
-	padding: 25px 0;
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 1000px) {
 		flex-direction: column;
-		justify-content: space-evenly;
+		gap: 75px;
+	}
+	@media screen and (max-width: 500px) {
+		flex-direction: column;
+		gap: 50px;
 	}
 `;
 
 export const Column = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 50%;
-	padding: 10px 25px;
-	@media screen and (max-width: 900px) {
-		width: 100%;
+	width: 45%;
+	gap: 15px;
+	@media screen and (max-width: 1000px) {
+		text-align: ${(props) => (props.imageFirst ? 'right' : 'left')};
+		width: 80%;
+		gap: 25px;
 	}
-`;
-
-export const Text = styled.div`
-	color: var(--dark);
+	@media screen and (max-width: 500px) {
+		width: 100%;
+		gap: 15px;
+	}
 `;
 
 export const ButtonBox = styled.div`
 	display: flex;
-	margin: 15px 0px;
+	@media screen and (max-width: 1000px) {
+		flex-direction: ${(props) => (props.imageFirst ? 'row-reverse' : 'row')};
+	}
 `;
 
 export const Image = styled.img`
 	width: 100%;
 	margin: 0 auto;
-	@media screen and (max-width: 900px) {
+	@media screen and (max-width: 1000px) {
 		width: 60%;
+	}
+	@media screen and (max-width: 500px) {
+		width: 80%;
 	}
 `;

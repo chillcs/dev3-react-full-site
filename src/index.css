@@ -19,6 +19,8 @@ font-family: 'Smooch Sans', sans-serif;
   --p: 18px;
   --xs: 15px;
   --header: 65px;
+  --boxed: 1000px;
+  --mobile: 500px;
 }
 
 *, html {

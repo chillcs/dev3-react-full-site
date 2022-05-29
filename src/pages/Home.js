@@ -27,21 +27,23 @@ const Home = () => {
 			<ImageText
 				id="about"
 				imageFirst={false}
-				alternateBG={false}
+				background="var(--light)"
+				color="var(--dark)"
 				title="About Us"
 				subtitle="We are a full service Shopify development agency"
 				btnText="Let's chat"
-				image="../../images/shop.png"
+				image="shop.png"
 				alt="responsive design"
 			/>
 			<ImageText
 				id="technologies"
 				imageFirst={true}
-				alternateBG={true}
+				background="var(--medium)"
+				color="var(--dark)"
 				title="Technologies"
 				subtitle="Specializing in HTML, CSS, JavaScript, Liquid, and React"
 				btnText="Let's chat"
-				image="../../images/code.png"
+				image="code.png"
 				alt="programming languages"
 			/>
 			<Services

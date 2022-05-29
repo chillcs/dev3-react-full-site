@@ -1,4 +1,4 @@
-import { Logo, BtnScroll } from './Elements';
+import { Logo, BtnS } from './Elements';
 import { FiX } from 'react-icons/fi';
 import { Link as Scroll, animateScroll } from 'react-scroll';
 import main from './Nav/Main.json';
@@ -34,7 +34,7 @@ const MobileMenu = ({ isOpen, toggle }) => {
 						);
 					})}
 				</Menu>
-				<BtnScroll
+				<BtnS
 					to="contact"
 					smooth="true"
 					exact="true"
@@ -43,7 +43,7 @@ const MobileMenu = ({ isOpen, toggle }) => {
 					onClick={toggle}
 				>
 					Let's chat
-				</BtnScroll>
+				</BtnS>
 			</Sidebar>
 		</>
 	);

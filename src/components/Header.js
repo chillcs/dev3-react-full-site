@@ -1,4 +1,4 @@
-import { Logo, BtnScroll } from './Elements';
+import { Logo, BtnS } from './Elements';
 import { FiMenu } from 'react-icons/fi';
 import { Link as Scroll, animateScroll } from 'react-scroll';
 import main from './Nav/Main.json';
@@ -37,7 +37,7 @@ const Header = ({ toggle, darkmode }) => {
 						})}
 					</Menu>
 					<ButtonBox>
-						<BtnScroll
+						<BtnS
 							to="contact"
 							smooth="true"
 							exact="true"
@@ -45,7 +45,7 @@ const Header = ({ toggle, darkmode }) => {
 							duration={500}
 						>
 							Let's chat
-						</BtnScroll>
+						</BtnS>
 					</ButtonBox>
 				</Nav>
 			</Navbar>
@@ -106,6 +106,7 @@ export const Menu = styled.ul`
 	min-width: 500px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	transform: translate(-50%, -50%);
 	color: ${({ darkmode }) => (darkmode ? 'var(--light)' : 'var(--dark)')};
 	@media screen and (max-width: 750px) {

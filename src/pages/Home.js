@@ -48,8 +48,11 @@ const Home = () => {
 			/>
 			<Services
 				id="services"
+				background="var(--dark)"
+				color="var(--light)"
 				title="Services"
-				subtitle="Taking businesses to the next level"
+				subtitle="It's what we do best"
+				btnText="Let's chat"
 			/>
 			<Portfolio
 				id="portfolio"

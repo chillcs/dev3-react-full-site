@@ -28,7 +28,7 @@ const Services = (props) => {
 							<CardText>
 								<Heading>Develop</Heading>
 								<Paragraph>
-									Our skilled developers will turn the designs into code
+									Our skilled developers will turn our designs into code
 								</Paragraph>
 							</CardText>
 						</Card>

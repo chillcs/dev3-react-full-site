@@ -56,6 +56,8 @@ const Home = () => {
 			/>
 			<Portfolio
 				id="portfolio"
+				background="var(--light)"
+				color="var(--dark)"
 				title="Portfolio"
 				subtitle="Have a glimpse at our latest work"
 			/>

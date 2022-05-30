@@ -45,9 +45,12 @@ export const BtnR = styled(Route)`
 	white-space: nowrap;
 	background: var(--accent);
 	color: var(--light);
+	min-width: 125px;
 	margin: 5px 0;
+	margin-right: 10px;
 	padding: 10px 25px;
 	font-size: var(--h3);
+	text-align: center;
 	border-radius: 0px;
 	transition: all 0.15s ease-in-out;
 	cursor: pointer;

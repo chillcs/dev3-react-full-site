@@ -44,3 +44,31 @@ a {
 ul, li {
   list-style-type: none;
 }
+
+/* Portfolio --- */
+
+.slide {
+	display: none;
+	width: 0;
+}
+
+.slide--active {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.bar {
+	background: var(--medium);
+	width: 30%;
+	height: 10px;
+	cursor: pointer;
+}
+
+.bar--active {
+	background: var(--dark);
+  width: 30%;
+	height: 10px;
+	cursor: pointer;
+}

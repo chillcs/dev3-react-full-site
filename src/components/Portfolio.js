@@ -98,51 +98,50 @@ export const Controls = styled.div`
 	top: 0;
 	right: 0;
 	display: flex;
-	width: 40%;
-	height: 50px;
+	justify-content: flex-end;
 	z-index: 5;
 `;
 
 export const BtnLeft = styled.div`
-	background: var(--gradient2);
-	border: 1px solid var(--color2);
-	color: var(--color2);
-	font-size: 18px;
-	letter-spacing: 1px;
-	width: 100px;
-	margin: 20px 0;
-	margin-right: 5px;
-	padding: 15px 25px;
-	cursor: pointer;
-	font-size: 35px;
-	font-weight: 100;
-	width: 50%;
-	height: 100%;
-	margin: 0;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	white-space: nowrap;
+	background: var(--accent);
+	color: var(--light);
+	min-width: 125px;
 	margin-left: 10px;
-	padding: 0;
-	padding-bottom: 3px;
+	padding: 8px 25px 10px 25px;
+	font-size: var(--h2);
+	text-align: center;
+	border-radius: 0px;
+	transition: all 0.15s ease-in-out;
+	cursor: pointer;
+	&:hover {
+		transition: all 0.15s ease-in-out;
+		background: var(--hover);
+	}
 `;
 
 export const BtnRight = styled.div`
-	background: var(--gradient2);
-	border: 1px solid var(--color2);
-	color: var(--color2);
-	font-size: 18px;
-	letter-spacing: 1px;
-	width: 100px;
-	margin: 20px 0;
-	margin-right: 5px;
-	padding: 15px 25px;
-	cursor: pointer;
-	font-size: 35px;
-	font-weight: 100;
-	width: 50%;
-	height: 100%;
-	margin: 0;
+	text-decoration: none;
+	outline: none;
+	border: none;
+	white-space: nowrap;
+	background: var(--accent);
+	color: var(--light);
+	min-width: 125px;
 	margin-left: 10px;
-	padding: 0;
-	padding-bottom: 3px;
+	padding: 8px 25px 10px 25px;
+	font-size: var(--h2);
+	text-align: center;
+	border-radius: 0px;
+	transition: all 0.15s ease-in-out;
+	cursor: pointer;
+	&:hover {
+		transition: all 0.15s ease-in-out;
+		background: var(--hover);
+	}
 `;
 
 export const Slide = styled.div``;

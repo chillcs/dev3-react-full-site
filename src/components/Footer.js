@@ -87,11 +87,12 @@ export const Section = styled.div`
 
 export const Row = styled.div`
 	display: flex;
-	max-width: 1100px;
+	max-width: 1000px;
 	margin: auto;
-	padding: 50px 10px;
+	padding: 50px 15px;
 	@media screen and (max-width: 600px) {
 		flex-direction: column;
+		text-align: center;
 	}
 `;
 
@@ -99,9 +100,10 @@ export const InfoColumn = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 50%;
-	padding: 10px 15px;
+	padding: 10px 0;
 	@media screen and (max-width: 600px) {
 		flex-direction: column;
+		align-items: center;
 		width: 100%;
 	}
 `;
@@ -119,16 +121,21 @@ export const LinkColumn = styled.div`
 
 export const Paragraph = styled.div`
 	max-width: 80%;
+	padding: 10px 5px;
 	font-size: var(--small);
 `;
 
 export const IconBox = styled.div`
 	display: flex;
 	margin: 15px 0;
+	padding: 0 5px;
 `;
 
 export const Icon = styled.div`
-	padding: 0 15px;
+	margin-right: 15px;
+	@media screen and (max-width: 600px) {
+		margin: 0 15px;
+	}
 `;
 
 export const LinkTitle = styled.div`
@@ -139,12 +146,10 @@ export const LinkTitle = styled.div`
 export const LinkItems = styled.div`
 	display: flex;
 	flex-direction: column;
-	@media screen and (max-width: 750px) {
-	}
 `;
 
 export const FooterScroll = styled(Scroll)`
-	padding: 5px 10px;
+	padding: 5px 0px;
 	font-size: var(--small);
 	color: var(--dark);
 	transition: 0.15s ease-in-out;
@@ -155,7 +160,7 @@ export const FooterScroll = styled(Scroll)`
 `;
 
 export const FooterRoute = styled(Route)`
-	padding: 5px 10px;
+	padding: 5px 0px;
 	font-size: var(--small);
 	color: var(--dark);
 	transition: 0.15s ease-in-out;

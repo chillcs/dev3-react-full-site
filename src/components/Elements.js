@@ -64,7 +64,7 @@ export const Section = styled.div`
 	min-height: calc(100vh - var(--header));
 	width: 100%;
 	margin: 0 auto;
-	padding: 75px 0;
+	padding: 50px 0;
 	background: ${(props) => props.background};
 `;
 

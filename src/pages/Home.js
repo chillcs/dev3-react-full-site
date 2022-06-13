@@ -61,7 +61,13 @@ const Home = () => {
 				title="Portfolio"
 				subtitle="Have a glimpse at our latest work"
 			/>
-			<Contact id="contact" title="Contact" subtitle="Let's get in touch!" />
+			<Contact
+				id="contact"
+				background="var(--medium)"
+				color="var(--dark)"
+				title="Contact"
+				subtitle="Let's get in touch!"
+			/>
 			<Footer />
 		</>
 	);

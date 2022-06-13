@@ -123,6 +123,7 @@ export const Link = styled(Scroll)`
 	&:hover {
 		color: var(--hover);
 		transition: 0.15s ease-in-out;
+		margin-bottom: 5px;
 	}
 	&.active {
 		border-bottom: 3px solid var(--accent);

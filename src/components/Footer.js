@@ -156,6 +156,7 @@ export const FooterScroll = styled(Scroll)`
 	&:hover {
 		color: var(--hover);
 		transition: 0.15s ease-in-out;
+		padding-left: 5px;
 	}
 `;
 
@@ -167,6 +168,7 @@ export const FooterRoute = styled(Route)`
 	&:hover {
 		color: var(--hover);
 		transition: 0.15s ease-in-out;
+		padding-left: 5px;
 	}
 `;
 

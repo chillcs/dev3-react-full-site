@@ -1,22 +1,22 @@
 [
-   {
-      "id": 0,
-      "title": "about us",
-      "to": "about"
-   },
-   {
-      "id": 1,
-      "title": "technologies",
-      "to": "technologies"
-   },
-   {
-      "id": 2,
-      "title": "services",
-      "to": "services"
-   },
-   {
-      "id": 3,
-      "title": "our work",
-      "to": "portfolio"
-   }
+  {
+    "id": 0,
+    "title": "about us",
+    "to": "about"
+  },
+  {
+    "id": 1,
+    "title": "services",
+    "to": "services"
+  },
+  {
+    "id": 2,
+    "title": "technologies",
+    "to": "technologies"
+  },
+  {
+    "id": 3,
+    "title": "our work",
+    "to": "portfolio"
+  }
 ]

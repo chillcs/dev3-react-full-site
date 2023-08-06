@@ -18,7 +18,7 @@ export const Logo = styled(Route)`
     transition: 0.15s ease-in-out;
   }
 `;
-/*test*/
+
 export const BtnS = styled(Scroll)`
   text-decoration: none;
   outline: none;
